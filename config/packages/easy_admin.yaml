@@ -1,0 +1,33 @@
+easy_admin:
+  entities:
+    Works:
+      class: App\Entity\Works
+      label: 'Works'
+      list:
+        title: "Most recent works"
+        fields:
+          - 'title'
+          - 'description'
+          - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+          - 'width'
+          - 'height'
+          - 'created_at'
+          - 'category'
+          - 'price'
+          - 'author'
+      form:
+        fields:
+          - 'title'
+          - 'description'
+          - { property: 'imageFile', type: 'file' }
+          - 'width'
+          - 'height'
+          #- 'created_at'
+          - 'category'
+          - 'price'
+          - 'author'
+
+    Category:
+      class: App\Entity\Category
+    User:
+      class: App\Entity\User

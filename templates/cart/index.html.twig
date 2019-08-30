@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shopping Cart{% endblock %}
+
+{% block body %}
+{% include 'nav.html.twig' %}
+<div class="wrapper-cart">
+ <div class="container">
+     <h1>
+         <i class="fa fa-shopping-bag"></i>
+         Shopping Cart
+     </h1>
+     <hr>
+     <div class="shopping-cart row mt-5">
+         <div class="cart-items col-lg-8">
+             <div class="jumbotron">
+                 <table class="table">
+                     <thead>
+                     <tr>
+                         <th scope="col">Product</th>
+                         <th scope="col">Price</th>
+                         <th scope="col">Quantity</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>Mark</td>
+                         <td>Otto</td>
+                         <td>@mdo</td>
+                     </tr>
+                     <tr>
+                         <td>Jacob</td>
+                         <td>Thornton</td>
+                         <td>@fat</td>
+                     </tr>
+                     <tr>
+                         <td>Larry</td>
+                         <td>the Bird</td>
+                         <td>@twitter</td>
+                     </tr>
+                     </tbody>
+                 </table>
+             </div>
+         </div>
+         <div class="cart-summary col-lg-4">
+             <div class="jumbotron">
+                 <h3>Cart Summary</h3>
+                 <hr>
+                 <div class="cart-calc">
+                    <span style="display: flex">Card Subtotal: <p>$20</p> </span>
+                    <span style="display: flex">Shipping: <p>$20</p> </span>
+                    <span style="display: flex">Cart Total: <p>$40</p> </span>
+                 </div>
+                 <button class="btn btn-light mt-2">Checkout</button>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+{% include 'footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WorkController!{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{#    <link href="{{asset('css/lightbox/css/lightbox.css')}}" rel="stylesheet" />#}
+    <link href="{{asset('css/lightbox/dist/css/lightbox.css')}}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+    {% include 'nav.html.twig' %}
+    <div class="example-work">
+        <div class="container">
+            <h1 class="works-heading">Watch the painting details and information.</h1>
+            <hr>
+            <div class="painting">
+                    <div class="work-preview">
+                        <a href="{{vich_uploader_asset(work, 'imageFile') }}" rel="lightbox" data-lightbox="{{work.title}}" data-title="{{work.title}}">
+                            <img src="{{vich_uploader_asset(work, 'imageFile') }}">
+                        </a>
+
+                        <h3><b>{{work.title}}</b></h3>
+                        <span style="color: #818a91"><b>Author: {{ work.author }}</b></span>
+                    </div>
+                    <div class="work-information">
+                        <h2><b>{{work.title}}</b></h2>
+                        <span><b>Category: </b>{{work.category}}</span>
+                        <hr>
+                        <h4>Description</h4>
+                        <p>{{work.description}} </p>
+                        <span><b>Dimension:</b> {{work.width}} x {{work.height}}</span>
+                        <h4><b>Price: </b>${{work.price}}</h4>
+                        <div class="purchase mt-4">
+                            <button class="btn btn-default" style="background: #eaeaea;">
+                                <i class="fa fa-shopping-cart"></i>
+                                Add To Cart
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fa fa-paper-plane-o"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('css/lightbox/dist/js/lightbox-plus-jquery.min.js') }}"></script>
+    <script src="{{asset('css/lightbox/js/lightbox.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,63 @@
+<div class="top-header">
+    <div class="top-info">
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                +355 55 55 55 55
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                mail@mail.com
+            </li>
+        </ul>
+    </div>
+    <div class="user-register">
+        <ul>
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <div class="dropdown">
+                    <a href="#" style="color: #fff;font-size: 18px;" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/profile" class="dropdown-item">
+                            <i class="fa fa-home"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-shopping-bag"></i>
+                            Purchase History
+                        </a>
+                        <a href="/logout" class="dropdown-item">
+                            <i class="fa fa-sign-out"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            {% else %}
+                <li><a href="/register" style="color: #fff">Register</a></li>
+                <li><a href="/login" style="color: #fff">Login</a></li>
+            {% endif %}
+        </ul>
+
+    </div>
+</div>
+<header class="header">
+    <div class="wrap">
+        <h2 class="logo"><a href="{{path('home')}}">Website Logo</a></h2>
+
+        <a id="menu-icon">&#9776; Menu</a>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
