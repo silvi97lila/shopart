@@ -19,6 +19,25 @@ class WorksRepository extends ServiceEntityRepository
         parent::__construct($registry, Works::class);
     }
 
+     /**
+      * @return Works[] Returns an array of Works objects
+      */
+    public function GetWorksByCategory($cateory){
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT w
+            FROM App\Entity\Works w
+            WHERE w.category = :category'
+        )->setParameter('category', $cateory);
+
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+
+
+
     // /**
     //  * @return Works[] Returns an array of Works objects
     //  */

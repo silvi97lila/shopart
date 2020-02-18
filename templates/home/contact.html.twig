@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {% include 'nav.html.twig' %}
+    <div class="secondary-banner">
+        <h1 class="center"> Contact </h1>
+    </div>
+    <div class="inner">
+        <div class="container">
+            <div class="contact">
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="fullName" class="form-control" name="fullName" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" name="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'footer.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

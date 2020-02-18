@@ -185,9 +185,6 @@ class Works
         return $this->imageFile;
     }
 
-    public function __toString() {
-        return $this->getTitle();
-    }
 
     public function getPrice(): ?int
     {
@@ -212,4 +209,8 @@ class Works
 
         return $this;
     }
+    public function __toString() {
+        return $this->getTitle();
+    }
+
 }

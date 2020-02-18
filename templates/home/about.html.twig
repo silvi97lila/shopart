@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About!{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {% include 'nav.html.twig' %}
+    <div class="secondary-banner">
+        <h1 class="center"> About </h1>
+    </div>
+    <div class="inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 img">
+                    <img src="https://picsum.photos/400/300?grayscale" alt="about">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-5">About Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus eius maiores modi numquam quibusdam repellendus saepe
+                        sapiente velit! Alias eius fugiat iusto numquam ullam. Aut dolore et molestiae quia saepe sequi velit.
+                        Accusantium corporis dolor doloribus ex iusto magni minima neque nihil pariatur placeat, praesentium quas quod unde voluptate.
+                    </p>
+                    <a href="#" class="btn secondary-btn">
+                        Read More <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'footer.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

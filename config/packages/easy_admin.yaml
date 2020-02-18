@@ -31,3 +31,9 @@ easy_admin:
       class: App\Entity\Category
     User:
       class: App\Entity\User
+    Address:
+      class: App\Entity\Address
+    Cart:
+      class: App\Entity\Cart
+    Purchase:
+      class: App\Entity\Purchase
